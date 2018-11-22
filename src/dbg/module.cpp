@@ -387,12 +387,8 @@ void ReadDebugDirectory(MODINFO & Info, ULONG_PTR FileMapVA)
                     FALSE,
                     IMAGE_DIRECTORY_ENTRY_DEBUG,
                     &debugDirSize);
-    if(debugDirSize == 0 || debugDir == nullptr ||
-            (ULONG_PTR)debugDir + debugDirSize > FileMapVA + Info.loadedSize || /* Check if debugDir fits into the mapped area */
-            (ULONG_PTR)debugDir + debugDirSize < (ULONG_PTR)debugDir) /* Check for ULONG_PTR wraparound (e.g. when debugDirSize == 0xfffff000) */
-    {
+    if(debugDirSize == 0 || debugDir == nullptr)
         return;
-    }
 
     struct CV_HEADER
     {
