@@ -93,7 +93,6 @@ private slots:
     void on_editSymbolCache_textEdited(const QString & arg1);
     void on_chkUtf16LogRedirect_toggled(bool checked);
     void on_chkShowGraphRva_toggled(bool checked);
-    void on_chkGraphZoomMode_toggled(bool checked);
     void on_chkUseLocalHelpFile_toggled(bool checked);
     void on_chkQueryProcessCookie_toggled(bool checked);
     void on_chkQueryWorkingSet_toggled(bool checked);
@@ -183,7 +182,6 @@ private:
         bool guiNoForegroundWindow;
         bool guiLoadSaveTabOrder;
         bool guiShowGraphRva;
-        bool guiGraphZoomMode;
         bool guiShowExitConfirmation;
         bool guiDisableAutoComplete;
         bool guiAsciiAddressDumpMode;
